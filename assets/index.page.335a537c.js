@@ -1,0 +1,1 @@
+import{a as r,o as c,F as s,b as o}from"./vendor.04e658e6.js";var l=(e,t)=>{const n=e.__vccOpts||e;for(const[_,a]of t)n[_]=a;return n};const d={},p=o("h1",null,"About",-1),u=o("p",null,"A colored page.",-1);function i(e,t){return c(),r(s,null,[p,u],64)}var f=l(d,[["render",i]]);export{f as default};
