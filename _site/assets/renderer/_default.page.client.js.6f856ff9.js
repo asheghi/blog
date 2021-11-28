@@ -1,1 +1,0 @@
-import{c as o,h as p,g as r}from"../vendor.31e6b9ee.js";const c=Symbol();function s(e,t){e.provide(c,t)}function i(e){const{Page:t,pageProps:n}=e,a=o({render(){return p(t,n||{})}});return s(a,e),a}g();async function g(){const e=await r();i(e).mount("#app")}
