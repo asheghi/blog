@@ -2,9 +2,11 @@
   "scripts": {
     "dev": "npm run server",
     "prod": "npm run build && npm run server:prod",
-    "build": "vite build && vite build --ssr",
+    "build": "rimraf ./dist && vite build && vite build --ssr",
     "server": "node ./server",
-    "render" : "npm run build && yarn vite-plugin-ssr prerender .",
+    "render": "cross-env NODE_ENV=production npm run build && yarn vite-plugin-ssr prerender .",
+    "gh-pages": "node deploy/gh-pages.js",
+    "deploy": "npm run render && npm run gh-pages",
     "server:prod": "cross-env NODE_ENV=production node ./server"
   },
   "dependencies": {
@@ -13,8 +15,15 @@
     "@vue/server-renderer": "^3.2.20",
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
+    "gh-pages": "^3.2.3",
     "vite": "2.6.7",
     "vite-plugin-ssr": "^0.3.31",
     "vue": "^3.2.20"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^2.2.19"
   }
 }

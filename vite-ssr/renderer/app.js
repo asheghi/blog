@@ -1,5 +1,6 @@
 import { createSSRApp, h } from 'vue'
 import { setPageContext } from './usePageContext'
+import './index.css';
 
 export { createApp }
 
